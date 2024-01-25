@@ -1,11 +1,10 @@
 package com.techacademy;
 
-import java.time.LocalDateTime; // 追加
-import java.time.format.DateTimeFormatter; // 追加
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import java.time.LocalDateTime; // 追加
+import java.time.format.DateTimeFormatter; // 追加
 
 @RestController
 public class HelloSpringBootController {
@@ -17,7 +16,7 @@ public class HelloSpringBootController {
 
     @GetMapping("now")
     public String dispTime() {
-        String now = LocalDateTime.now().format( DateTimeFormatter.ofPattern("HH:mm:ss") );
+        String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss") );
         return "現在時刻:" + now;
     }
 
